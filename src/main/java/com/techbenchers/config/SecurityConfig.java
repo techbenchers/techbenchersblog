@@ -1,4 +1,4 @@
-package com.techbenchers.blog.config;
+package com.techbenchers.config;
 
 
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
-@Configuration
+//@Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override

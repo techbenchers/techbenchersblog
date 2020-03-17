@@ -21,7 +21,7 @@
 <!--    <div class="container text-danger error"></div>-->
 
     <script type="text/javascript">
-        $.get("/user", function(data) {
+        $.get("/auth/user", function(data) {
             $("#user").html(data.user_name);
             $(".unauthenticated").hide();
             $(".authenticated").show();

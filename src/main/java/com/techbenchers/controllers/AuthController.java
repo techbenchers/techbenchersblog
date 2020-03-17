@@ -1,7 +1,8 @@
-package com.techbenchers.blog.oauth;
+package com.techbenchers.controllers;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.techbenchers.utils.JsonUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,16 +11,12 @@ import java.security.Principal;
 import java.util.HashMap;
 
 @RestController
-public class Controller {
-//    @GetMapping("/")
-//    public String helloWorld() {
-//        return "Hello World";
-//    }
+public class AuthController {
 
-    @GetMapping("/user")
+    @GetMapping("/auth/user")
     @ResponseBody
     public HashMap<String, String> user(Principal principal) throws JsonProcessingException {
-        ParseJsonString parseJsonString = new ParseJsonString();
+        JsonUtil parseJsonString = new JsonUtil();
         return parseJsonString.parse(principal);
     }
 }

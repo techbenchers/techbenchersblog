@@ -1,4 +1,4 @@
-package com.techbenchers.blog.oauth;
+package com.techbenchers.utils;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.security.Principal;
 import java.util.HashMap;
 
-class ParseJsonString {
+public class JsonUtil {
     public HashMap<String, String> parse(Principal principal) {
         String json = objectToJsonString(principal);
         JsonNode jsonNode = jsonStringToJsonObject(json);
